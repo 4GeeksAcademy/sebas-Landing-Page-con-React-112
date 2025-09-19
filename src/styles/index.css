@@ -1,0 +1,81 @@
+:root{
+  --bg:#0f172a;
+  --panel:#0b1220;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --primary:#22d3ee;
+  --ring: rgba(34,211,238,.35);
+}
+
+html,body,#root,#app{min-height:100%}
+body{
+  background:
+    radial-gradient(1200px 800px at 10% -20%, #1f2937 0%, transparent 60%),
+    radial-gradient(1200px 800px at 120% 120%, #1f2937 0%, transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar{
+  backdrop-filter: saturate(150%) blur(6px);
+  background: rgba(10,14,25,.75)!important;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  position: sticky; top:0; z-index:1020;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  border-radius: 18px;
+  background:
+    radial-gradient(600px 300px at 10% -10%, rgba(34,211,238,.25) 0, transparent 55%),
+    radial-gradient(800px 400px at 120% 120%, rgba(34,211,238,.18) 0, transparent 55%),
+    linear-gradient(160deg, #0b1220, #0e1726 60%, #0b1220 100%);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+}
+.hero .btn-primary{
+  background: linear-gradient(180deg, var(--primary), #1fb6ce);
+  border: none;
+  color: #05131a;
+  box-shadow: 0 12px 30px rgba(34,211,238,.28);
+}
+.hero .btn-outline-light{
+  border-color: rgba(255,255,255,.35);
+  color: var(--text);
+}
+.hero .btn:focus-visible{
+  box-shadow: 0 0 0 8px var(--ring);
+  outline: none;
+}
+
+/* ---------- CARD ---------- */
+.card{
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  color: var(--text);
+  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+  transition: transform .18s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  border-color: rgba(34,211,238,.25);
+}
+.card .btn-primary{
+  background: linear-gradient(180deg, var(--primary), #1fb6ce);
+  border: none;
+  color:#05131a;
+}
+.card-img-top{ display:block; }
+
+/* ---------- FOOTER ---------- */
+footer{
+  border-top: 1px solid rgba(255,255,255,.07);
+  background: rgba(10,14,25,.6);
+}
+
+/* ---------- UTIL ---------- */
+.text-muted-custom{ color: var(--muted)!important; }
